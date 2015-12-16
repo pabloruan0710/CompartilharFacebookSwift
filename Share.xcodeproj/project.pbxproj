@@ -12,6 +12,12 @@
 		4B1157911C2216280072576A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B11578F1C2216280072576A /* Main.storyboard */; };
 		4B1157931C2216280072576A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B1157921C2216280072576A /* Assets.xcassets */; };
 		4B1157961C2216280072576A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B1157941C2216280072576A /* LaunchScreen.storyboard */; };
+		4B1157A11C2216870072576A /* fontawesome-webfont.ttf in Sources */ = {isa = PBXBuildFile; fileRef = 4B11579D1C2216870072576A /* fontawesome-webfont.ttf */; };
+		4B1157A21C2216870072576A /* ionicons.ttf in Sources */ = {isa = PBXBuildFile; fileRef = 4B11579E1C2216870072576A /* ionicons.ttf */; };
+		4B1157A31C2216870072576A /* octicons.ttf in Sources */ = {isa = PBXBuildFile; fileRef = 4B11579F1C2216870072576A /* octicons.ttf */; };
+		4B1157A41C2216870072576A /* open-iconic.ttf in Sources */ = {isa = PBXBuildFile; fileRef = 4B1157A01C2216870072576A /* open-iconic.ttf */; };
+		4B1157A71C2217320072576A /* socicon.ttf in Sources */ = {isa = PBXBuildFile; fileRef = 4B1157A61C2217320072576A /* socicon.ttf */; };
+		4B1157A91C2221FA0072576A /* sem_foto.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4B1157A81C2221FA0072576A /* sem_foto.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +28,12 @@
 		4B1157921C2216280072576A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4B1157951C2216280072576A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4B1157971C2216280072576A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4B11579D1C2216870072576A /* fontawesome-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "fontawesome-webfont.ttf"; sourceTree = "<group>"; };
+		4B11579E1C2216870072576A /* ionicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ionicons.ttf; sourceTree = "<group>"; };
+		4B11579F1C2216870072576A /* octicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = octicons.ttf; sourceTree = "<group>"; };
+		4B1157A01C2216870072576A /* open-iconic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "open-iconic.ttf"; sourceTree = "<group>"; };
+		4B1157A61C2217320072576A /* socicon.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = socicon.ttf; sourceTree = "<group>"; };
+		4B1157A81C2221FA0072576A /* sem_foto.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sem_foto.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +50,7 @@
 		4B11577F1C2216280072576A = {
 			isa = PBXGroup;
 			children = (
+				4B1157A51C22168A0072576A /* Fontes */,
 				4B11578A1C2216280072576A /* Share */,
 				4B1157891C2216280072576A /* Products */,
 			);
@@ -54,6 +67,7 @@
 		4B11578A1C2216280072576A /* Share */ = {
 			isa = PBXGroup;
 			children = (
+				4B1157A81C2221FA0072576A /* sem_foto.jpg */,
 				4B11578B1C2216280072576A /* AppDelegate.swift */,
 				4B11578D1C2216280072576A /* ViewController.swift */,
 				4B11578F1C2216280072576A /* Main.storyboard */,
@@ -62,6 +76,18 @@
 				4B1157971C2216280072576A /* Info.plist */,
 			);
 			path = Share;
+			sourceTree = "<group>";
+		};
+		4B1157A51C22168A0072576A /* Fontes */ = {
+			isa = PBXGroup;
+			children = (
+				4B1157A61C2217320072576A /* socicon.ttf */,
+				4B11579D1C2216870072576A /* fontawesome-webfont.ttf */,
+				4B11579E1C2216870072576A /* ionicons.ttf */,
+				4B11579F1C2216870072576A /* octicons.ttf */,
+				4B1157A01C2216870072576A /* open-iconic.ttf */,
+			);
+			name = Fontes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,6 +151,7 @@
 				4B1157961C2216280072576A /* LaunchScreen.storyboard in Resources */,
 				4B1157931C2216280072576A /* Assets.xcassets in Resources */,
 				4B1157911C2216280072576A /* Main.storyboard in Resources */,
+				4B1157A91C2221FA0072576A /* sem_foto.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,6 +162,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B1157A71C2217320072576A /* socicon.ttf in Sources */,
+				4B1157A11C2216870072576A /* fontawesome-webfont.ttf in Sources */,
+				4B1157A21C2216870072576A /* ionicons.ttf in Sources */,
+				4B1157A31C2216870072576A /* octicons.ttf in Sources */,
+				4B1157A41C2216870072576A /* open-iconic.ttf in Sources */,
 				4B11578E1C2216280072576A /* ViewController.swift in Sources */,
 				4B11578C1C2216280072576A /* AppDelegate.swift in Sources */,
 			);
@@ -250,6 +282,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Share/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.primesoftware.Share;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -261,6 +294,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Share/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.primesoftware.Share;
 				PRODUCT_NAME = "$(TARGET_NAME)";

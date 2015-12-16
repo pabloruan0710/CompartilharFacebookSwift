@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Share" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +16,81 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tsn-tU-7lT">
+                                <rect key="frame" x="20" y="258" width="560" height="84"/>
+                                <color key="backgroundColor" red="0.28235294119999998" green="0.50196078430000002" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="84" id="QH1-ay-fIo"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="36"/>
+                                <state key="normal" title="Compartilhar">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="CompartilharImagem:" destination="BYZ-38-t0r" eventType="touchUpInside" id="q1g-bz-mF3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o9M-4W-Zlv">
+                                <rect key="frame" x="20" y="173" width="560" height="47"/>
+                                <color key="backgroundColor" red="0.75294117650000003" green="0.22352941179999999" blue="0.16862745100000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="47" id="BlW-aU-INR"/>
+                                </constraints>
+                                <state key="normal" title="Galeria">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="ImagemGaleria:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Hjo-xG-kpH"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mg3-6B-w8G">
+                                <rect key="frame" x="20" y="87" width="560" height="47"/>
+                                <color key="backgroundColor" red="0.180392161" green="0.80000001190000003" blue="0.4431372583" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="47" id="2dx-TB-Hlo"/>
+                                </constraints>
+                                <state key="normal" title="Tirar Foto">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="TirarFoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="G0Y-bz-ajR"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sem_foto.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="dPB-Rf-7ZQ">
+                                <rect key="frame" x="169" y="380" width="262" height="166"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="262" id="4CB-gl-3l9"/>
+                                    <constraint firstAttribute="height" constant="166" id="lP4-oR-mk8"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Tsn-tU-7lT" firstAttribute="top" secondItem="o9M-4W-Zlv" secondAttribute="bottom" constant="38" id="4pC-Tc-Lav"/>
+                            <constraint firstAttribute="trailing" secondItem="mg3-6B-w8G" secondAttribute="trailing" constant="20" id="8J9-BL-yNg"/>
+                            <constraint firstItem="Tsn-tU-7lT" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="BDF-MZ-LBX"/>
+                            <constraint firstAttribute="trailing" secondItem="o9M-4W-Zlv" secondAttribute="trailing" constant="20" id="EQI-LT-t5z"/>
+                            <constraint firstItem="o9M-4W-Zlv" firstAttribute="top" secondItem="mg3-6B-w8G" secondAttribute="bottom" constant="39" id="Hgx-IF-RbN"/>
+                            <constraint firstItem="mg3-6B-w8G" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="Lxb-df-VsI"/>
+                            <constraint firstItem="Tsn-tU-7lT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="Mia-mw-Zg0"/>
+                            <constraint firstItem="dPB-Rf-7ZQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Q5Z-BE-JXt"/>
+                            <constraint firstItem="Tsn-tU-7lT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Xfu-8M-9x8"/>
+                            <constraint firstItem="dPB-Rf-7ZQ" firstAttribute="top" secondItem="Tsn-tU-7lT" secondAttribute="bottom" constant="38" id="hNU-oN-kXC"/>
+                            <constraint firstAttribute="trailing" secondItem="Tsn-tU-7lT" secondAttribute="trailing" constant="20" id="uW0-RP-XFl"/>
+                            <constraint firstItem="o9M-4W-Zlv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="vg5-U6-61h"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="Img_Selecionada" destination="dPB-Rf-7ZQ" id="fIc-RW-ZGu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="423" y="321"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="sem_foto.jpg" width="800" height="800"/>
+    </resources>
 </document>
