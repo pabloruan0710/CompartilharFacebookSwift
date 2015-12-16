@@ -131,12 +131,39 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                 //Adiciona Imagem
                 faceSheet.addImage(ImagemSelecionada)
                 
-                //REMOVE IMAGEM DA VARIAVEL, PARA POSTAR NOVA FOTO DEPOIS
-                ImagemSelecionada = nil
+                
             }
             
             
             self.presentViewController(faceSheet, animated: true, completion: nil)
+            
+            //VERIFICA SE FOI OU NÃO POSTADA
+            faceSheet.completionHandler = {result -> Void in
+               
+                var resultado = result as SLComposeViewControllerResult
+                
+                switch resultado.rawValue {
+                
+                case SLComposeViewControllerResult.Cancelled.rawValue:
+                    let alert = UIAlertView(title: "Atenção", message: "Compartilhamento Cancelado", delegate: self, cancelButtonTitle: "Cancelar")
+                    alert.show()
+                
+                case SLComposeViewControllerResult.Done.rawValue:
+                    let alert = UIAlertView(title: "Atenção", message: "Compartilhado com Sucesso.", delegate: self, cancelButtonTitle: "Cancelar")
+                    alert.show()
+                
+                    //REMOVE IMAGEM DA VARIAVEL, PARA POSTAR NOVA FOTO DEPOIS
+                    self.ImagemSelecionada = nil
+                    
+                    //RESET IMAGEM VIEW
+                    self.Img_Selecionada.image = UIImage(named: "sem_foto.jpg")
+                    
+                default:
+                    let alert = UIAlertView(title: "Atenção", message: "Aconteceu algo de errado :(", delegate: self, cancelButtonTitle: "Cancelar")
+                    alert.show()
+                    break;
+                }
+            }
             
         }else{
             
@@ -144,6 +171,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             AlertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
             self.presentViewController(AlertController, animated: true, completion: nil)
         }
+        
+        
     }
 
 }
