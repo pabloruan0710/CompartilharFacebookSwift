@@ -7,3 +7,6 @@ Veja como compartilhar uma imagem diretamente no facebook utilizando Xcode 7 e S
 
 No Projeto está bem comentado e explicando como Compartilhar uma imagem tirada no momento ou
 como selecionar uma imagem da galeira
+
+
+![alt tag](http://i.imgur.com/lkuRyL8.png?1)
